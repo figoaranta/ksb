@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
+use App\Http\Controllers\Controller;
 use App\Wheel;
 use Illuminate\Http\Request;
 use App\Http\Resources\WheelResource;
@@ -29,6 +30,10 @@ class WheelController extends Controller
         if($request->brandType == "Goodyear"){
             $uniqueCode = $uniqueCode."GY";
         }
+        else if($request->brandType == "Bridgestone"){
+            $uniqueCode = $uniqueCode."BS";
+        }
+        
         $uniqueCode = $uniqueCode."-".$request->wheelSizeType."-".$request->ringSizeType."-".$request->patternType;
         
     	$wheel = Wheel::create([

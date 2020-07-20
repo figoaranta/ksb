@@ -17,11 +17,7 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-Route::apiResource('accounts','AccountController');
-Route::apiResource('wheels','WheelController');
-Route::apiResource('stocks','StockController');
-Route::apiResource('clients_suppliers','Client_SupplierController');
-Route::apiResource('clients','ClientController');
-Route::apiResource('suppliers','SupplierController');
-Route::apiResource('hutangs','HutangController');
-Route::apiResource('piutangs','PiutangController');
+Route::prefix('v1')->group(function(){
+	Route::apiResource('accounts','AccountController');
+	Route::apiResource('wheels','WheelController');
+});
