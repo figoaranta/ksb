@@ -18,6 +18,6 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 Route::prefix('v1')->group(function(){
-	Route::apiResource('accounts','AccountController');
-	Route::apiResource('wheels','WheelController');
+	Route::apiResource('accounts','Api\v1AccountController');
+	Route::apiResource('wheels','Api\v1WheelController');
 });
