@@ -20,4 +20,5 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('v1')->group(function(){
 	Route::apiResource('accounts','Api\v1\AccountController');
 	Route::apiResource('wheels','Api\v1\WheelController');
+	Route::apiResource('clients_suppliers','Api\v1\Client_SupplierController');
 });
