@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
-Route::prefix('v1')->group(function(){
+Route::prefix('backend1/v1')->group(function(){
 	Route::apiResource('accounts','Api\v1\AccountController');
 	Route::apiResource('wheels','Api\v1\WheelController');
 	Route::apiResource('clients_suppliers','Api\v1\Client_SupplierController');
